@@ -1,4 +1,7 @@
-age = inpuit("Enter your age: ")
+print ("Welcome to Americas Travel Guide")
+name = input("what is your name?")
+print (f"Welcome{name} lets find you a place to travel too!")
+age = input("Enter your age: ")
 gender = input("Enter your gender: ")
 print(f"You are {age} years old and your gender is {gender}.")      
 confirmation = input("Is this correct? (yes/no): ").strip().lower()
@@ -6,7 +9,17 @@ if confirmation == "yes":
     print("Thank you for confirming your details.") 
 else:
     print("Please restart the program to enter your details again.")
-    money = input("Enter the amount of money you are willing to spend: ")
+    
+print("First lets start off with what you are looking for!")
+print("Please fill this question sheet with what you would like to find in your destination")
+climate  = input("What climate type are you looking for?")
+
+
+
+
+
+
+money = input("Enter the amount of money you are willing to spend: ")
 money = float(money)
 if money < 10:
     print("You can not afford to go on a trip.")
