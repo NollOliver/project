@@ -1,4 +1,4 @@
-age = inpuit("Enter your age: ")
+age = input("Enter your age: ")
 gender = input("Enter your gender: ")
 print(f"You are {age} years old and your gender is {gender}.")      
 confirmation = input("Is this correct? (yes/no): ").strip().lower()
@@ -12,10 +12,8 @@ if money < 10:
     print("You can not afford to go on a trip.")
 elif money >= 10 and money < 100:
     print("You can go on a local trip.")
-elif money >= 100 and money < 1000:
+elif money >= 100 and money < 5000:
     print("You can go on a domestic trip.")
-elif money >= 1000:
-    print("You can go on an international trip.")
 destination = input("Enter your desired travel destination: ")
 print(f"You have chosen to travel to {destination}. Enjoy your trip!")
 list_of_items = []
@@ -25,7 +23,14 @@ for i in range(3):
 print("You have packed the following items for your trip:")
 for item in list_of_items: 
     print(f"- {item}")
-list = []
-print("Here is a list of all 50 U.S. states:")
-pick = input("Pick a state between 1 and 50: ")
+    
 
+
+print("Here is a list of all 50 U.S. states:")
+file = open ("states.txt","r")
+States = file.readlines()
+
+file.close()
+for i in range(len(States)):
+    States[i] = States[i].strip
+pick = input("Pick a state between 1 and 50: ")
