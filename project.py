@@ -77,3 +77,10 @@ file.close()
 for i in range(len(States)):
     States[i] = States[i].strip
 pick = input("Pick a state between 1 and 50: ")
+pick = int(pick)
+print(f"You have picked {States[pick-1]}. let's go there!")else: 
+list_of_items.append(item)
+print("You have packed the following items for your trip:")
+for item in list_of_items: 
+    print(f"- {item}")
+    
