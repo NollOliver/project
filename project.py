@@ -44,6 +44,7 @@ elif money >= 1000 and money < 10000:
     print("Here is a list of Domestic States you can travel too")
     file = open ("Domestic States.txt","r")
     DomesticStates = file.readlines()
+    print(DomesticStates)
 
     file.close()
     for i in range(len(DomesticStates)):
