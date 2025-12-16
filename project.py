@@ -32,13 +32,33 @@ elif money >= 500 and money < 1000:
     print('Here is a list of Local States you can travel too')
     file = open ("Local States.txt","r")
     LocalStates = file.readlines()
-    print(LocalStates)
-
     file.close()
+    
+    
     for i in range(len(LocalStates)):
-        LocalStates[i] = LocalStates[i].strip()
+        LocalStates[i] = LocalStates[i].strip().lower()
+    print(LocalStates)
     pick = input("Pick a Local State you would like to Travel too!:")
-    if pick "Califonia"
+    if pick == "Delaware":
+        print("Here is a list of things to do while you are here!")
+        file = open ("Delaware.txt","r")
+        Delaware = file.readlines()
+        print(Delaware)
+        print("What would you like to do?")
+        
+    if pick == "Virginia":
+            print("Here is a list of things to do while you are here!")
+            file = open ("Virginia.txt","r")
+            Virginia = file.readlines()
+            print(Virginia)
+            print("What would you like to do?")
+            
+    if pick == "Maryland":
+            print("Here is a list of things to do while you are here!")
+            file = open ("Maryland.txt","r")
+            Maryland = file.readlines()
+            print(Maryland)
+            print("What would you like to do?")
     
 elif money >= 1000 and money < 10000:
     print("You can go on a domestic trip.")
@@ -47,13 +67,7 @@ elif money >= 1000 and money < 10000:
     DomesticStates = file.readlines()
     print(DomesticStates)
 
-    file.close()
-    for i in range(len(DomesticStates)):
-        DomesticStates[i] = DomesticStates[i].strip()
-    pick = input("Pick a Domestic State you would like to Travel too!:")
-destination = input("Enter your desired travel destination: ")
 
-print(f"You have chosen to travel to {destination}.")
 
 
 
