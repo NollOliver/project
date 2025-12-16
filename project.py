@@ -36,7 +36,7 @@ elif money >= 500 and money < 1000:
 
     file.close()
     for i in range(len(LocalStates)):
-        LocalStates[i] = LocalStates[i].strip
+        LocalStates[i] = LocalStates[i].strip()
     pick = input("Pick a Local State you would like to Travel too!:")
     
 elif money >= 1000 and money < 10000:
@@ -48,7 +48,7 @@ elif money >= 1000 and money < 10000:
 
     file.close()
     for i in range(len(DomesticStates)):
-        DomesticStates[i] = DomesticStates[i].strip
+        DomesticStates[i] = DomesticStates[i].strip()
     pick = input("Pick a Domestic State you would like to Travel too!:")
 destination = input("Enter your desired travel destination: ")
 print(f"You have chosen to travel to a {destination}.")
@@ -66,19 +66,15 @@ for i in range(3):
 print("You have packed the following items for your trip:")
 for item in list_of_items: 
     print(f"- {item}")
-    
 
-
-print("Here is a list of all 50 U.S. states:")
-file = open ("states.txt","r")
-States = file.readlines()
 
 file.close()
 for i in range(len(States)):
     States[i] = States[i].strip
 pick = input("Pick a state between 1 and 50: ")
 pick = int(pick)
-print(f"You have picked {States[pick-1]}. let's go there!")else: 
+print(f"You have picked {States[pick-1]}. let's go there!")
+
 list_of_items.append(item)
 print("You have packed the following items for your trip:")
 for item in list_of_items: 
