@@ -23,85 +23,114 @@ while check == False:
             print("Please restart the program to enter your details again.")
     
  
-    
-money = input("Enter the amount of money you are willing to spend: ")
-money = float(money)
+check = False
+while check == False:    
+    money = input("Enter the amount of money you are willing to spend: ")
+    money = float(money)
 
-if money < 500:
-    print("You can not afford to go on a trip.")
-    print("sorry")
-    
-elif money >= 500 and money < 1000:
-    print("You can go on a local trip.")
-    print('Here is a list of Local States you can travel too')
-    file = open ("Local States.txt","r")
-    LocalStates = file.readlines()
-    file.close()
-    
-    
-    for i in range(len(LocalStates)):
-        LocalStates[i] = LocalStates[i].strip().lower()
-    print(LocalStates)
-    pick = input("Pick a Local State you would like to Travel too!:").strip().lower()
-    
-    if pick == "Delaware".strip().lower():
-        print("Here is a list of things to do while you are here!")
-        file = open ("Delaware.txt","r")
-        Delaware = file.readlines()
-        for i in range(len(Delaware)):
-            Delaware[i] = Delaware[i].strip().lower()
-        print(Delaware)
+    if money < 500:
+        print("You can not afford to go on a trip.")
+        print("sorry")
         
-        activity = input("What would you like to do?").strip()
-        if activity =="Relax at Rehoboth Beach":
-            print("Awesome! Enjoy your trip!") 
+    elif money >= 500 and money <= 1000:
+        print("You can go on a local trip.")
+        print('Here is a list of Local States you can travel too')
+        file = open ("Local States.txt","r")
+        LocalStates = file.readlines()
+        file.close()
         
-        if activity =="Walk the Riverfront in Wilmington":
-            print("Awesome! Enjoy your trip!") 
         
-        if activity =="Visit Cape Henlopen State Park":
-            print("Awesome! Enjoy your trip!")    
+        for i in range(len(LocalStates)):
+            LocalStates[i] = LocalStates[i].strip().lower()
+        print(LocalStates)
+        pick = input("Pick a Local State you would like to Travel too!:").strip().lower()
         
-    
-    if pick == "Virginia".strip().lower():
+        if pick == "Delaware".strip().lower():
             print("Here is a list of things to do while you are here!")
-            file = open ("Virginia.txt","r")
-            Virginia = file.readlines()
-            for i in range(len(Virginia)):
-                Virginia[i] = Virginia[i].strip().lower()
-            print(Virginia)
-   
-   
-   
-            activity1 = input("What would you like to do?").strip()
-            if activity1 =="Tour historic Colonial Williamsburg":
-                print("Awesome! Enjoy your trip!") 
+            file = open ("Delaware.txt","r")
+            Delaware = file.readlines()
+            for i in range(len(Delaware)):
+                Delaware[i] = Delaware[i].strip().lower()
+            print(Delaware)
             
-            if activity1 =="Hike Shenandoah National Park":
-                print("Awesome! Enjoy your trip!") 
+            activity = input("What would you like to do?").strip()
+            if activity =="relax at rehoboth beach":
+                print("Awesome!")
+                print(f"You have selected {activity}")
+                print("Enjoy your trip!")
+                check = True
             
-            if activity1 =="Visit the Smithsonian museums in Northern Virginia":
-                print("Awesome! Enjoy your trip!") 
+            if activity =="walk the riverfront in wilmington":
+                print("Awesome!")
+                print(f"You have selected {activity}")
+                print("Enjoy your trip!") 
+                check = True
             
-            
-            
-            
-    if pick == "Maryland".strip().lower():
-            print("Here is a list of things to do while you are here!")
-            file = open ("Maryland.txt","r")
-            Maryland = file.readlines()
-            for i in range(len(Maryland)):
-                Maryland[i] = Maryland[i].strip().lower()
-            print(Maryland)
-            activity2 = input("What would you like to do?").strip()
-            if activity2 =="Visit the Inner Harbor in Baltimore":
-                print("Awesome! Enjoy your trip!") 
-            
-            if activity2 =="Explore Assateague Island and see the wild horses":
-                print("Awesome! Enjoy your trip!") 
-            
-            if activity2 =="Tour the National Aquarium":
-                print("Awesome! Enjoy your trip!") 
-               
-            
+            if activity =="visit cape henlopen state park":
+                print("Awesome!")
+                print(f"You have selected {activity}")
+                print("Enjoy your trip!") 
+                check = True
+            else:
+                print("Please restart the program to enter your details again.")
+        
+        if pick == "Virginia".strip().lower():
+                print("Here is a list of things to do while you are here!")
+                file = open ("Virginia.txt","r")
+                Virginia = file.readlines()
+                for i in range(len(Virginia)):
+                    Virginia[i] = Virginia[i].strip().lower()
+                print(Virginia)
+    
+    
+    
+                activity1 = input("What would you like to do?").strip()
+                if activity1 =="tour historic colonial williamsburg":
+                    print("Awesome!")
+                    print(f"You have selected {activity1}")
+                    print("Enjoy your trip!")
+                    check = True
+                
+                if activity1 =="hike shenandoah national park":
+                    print("Awesome!")
+                    print(f"You have selected {activity1}")
+                    print("Enjoy your trip!")
+                    check = True
+                
+                if activity1 =="visit the smithsonian museums in northern virginia":
+                    print("Awesome!")
+                    print(f"You have selected {activity1}")
+                    print("Enjoy your trip!")
+                    check = True
+                
+                else:
+                    print("Please restart the program to enter your details again.")
+                
+                
+        if pick == "Maryland".strip().lower():
+                print("Here is a list of things to do while you are here!")
+                file = open ("Maryland.txt","r")
+                Maryland = file.readlines()
+                for i in range(len(Maryland)):
+                    Maryland[i] = Maryland[i].strip().lower()
+                print(Maryland)
+                activity2 = input("What would you like to do?").strip()
+                if activity2 =="visit the inner harbor in baltimore":
+                    print("Awesome!")
+                    print(f"You have selected {activity2}")
+                    print("Enjoy your trip!")
+                    check = True
+                
+                if activity2 =="explore assateague island and see the wild horses":
+                    print("Awesome!")
+                    print(f"You have selected {activity2}")
+                    print("Enjoy your trip!") 
+                    check = True
+                
+                if activity2 =="tour the national aquarium":
+                    print("Awesome!")
+                    print(f"You have selected {activity2}")
+                    print("Enjoy your trip!") 
+                    check = True
+                
 
