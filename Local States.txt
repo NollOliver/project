@@ -1,9 +1,3 @@
 Maryland
 Delaware
 Virginia
-West Virginia
-Pennsylvania
-New Jersey
-New York
-District of Columbia (not a state, optional if you want)
-North Carolina
