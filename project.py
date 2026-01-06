@@ -75,11 +75,15 @@ States = file.readlines()
 file.close()
 for i in range(len(States)):
     States[i] = States[i].strip
-pick = input("Pick a state between 1 and 50: ")
-pick = int(pick)
-print(f"You have picked {States[pick-1]}. let's go there!")else: 
-list_of_items.append(item)
-print("You have packed the following items for your trip:")
-for item in list_of_items: 
-    print(f"- {item}")
+pick = input("Pick a state between 1 and 4: ") 
+print(f"You have chosen to visit {States[int(pick)-1]}.)")
+list_of_activities = []
+for i in range(3):
+    activity = input("Enter an activity you would like to do on your trip: ")
+    list_of_activities.append(activity)
+print("You have planned the following activities for your trip:")
+for activity in list_of_activities:
+    print(f"- {activity}")
     
+    
+ 
