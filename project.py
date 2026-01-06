@@ -1,6 +1,6 @@
 check = False
 while check == False:
-    print ("Welcome to America's Travel Guide")
+    print ("Welcome to the Local Travel Guide")
     name = input("what is your name?").split() 
     age = int (input("Enter your age:"))
     
@@ -48,36 +48,40 @@ elif money >= 500 and money < 1000:
         print("Here is a list of things to do while you are here!")
         file = open ("Delaware.txt","r")
         Delaware = file.readlines()
+        for i in range(len(Delaware)):
+            Delaware[i] = Delaware[i].strip().lower()
         print(Delaware)
         
         activity = input("What would you like to do?").strip()
         if activity =="Relax at Rehoboth Beach":
-            print("awesome!")
+            print("Awesome! Enjoy your trip!") 
         
         if activity =="Walk the Riverfront in Wilmington":
-            print("awesome!")
+            print("Awesome! Enjoy your trip!") 
         
         if activity =="Visit Cape Henlopen State Park":
-            print("awesome!")   
+            print("Awesome! Enjoy your trip!")    
         
     
     if pick == "Virginia".strip().lower():
             print("Here is a list of things to do while you are here!")
             file = open ("Virginia.txt","r")
             Virginia = file.readlines()
+            for i in range(len(Virginia)):
+                Virginia[i] = Virginia[i].strip().lower()
             print(Virginia)
    
    
    
             activity1 = input("What would you like to do?").strip()
             if activity1 =="Tour historic Colonial Williamsburg":
-                print("awesome!")
+                print("Awesome! Enjoy your trip!") 
             
             if activity1 =="Hike Shenandoah National Park":
-                print("awesome!")
+                print("Awesome! Enjoy your trip!") 
             
             if activity1 =="Visit the Smithsonian museums in Northern Virginia":
-                print("awesome!")
+                print("Awesome! Enjoy your trip!") 
             
             
             
@@ -86,28 +90,18 @@ elif money >= 500 and money < 1000:
             print("Here is a list of things to do while you are here!")
             file = open ("Maryland.txt","r")
             Maryland = file.readlines()
+            for i in range(len(Maryland)):
+                Maryland[i] = Maryland[i].strip().lower()
             print(Maryland)
             activity2 = input("What would you like to do?").strip()
             if activity2 =="Visit the Inner Harbor in Baltimore":
-                print("awesome!")
+                print("Awesome! Enjoy your trip!") 
             
             if activity2 =="Explore Assateague Island and see the wild horses":
-                print("awesome!")
+                print("Awesome! Enjoy your trip!") 
             
             if activity2 =="Tour the National Aquarium":
-                print("awesome!") 
+                print("Awesome! Enjoy your trip!") 
+               
             
 
-
-
-""""
-list_of_items = []
-for i in range(3):
-    item = input("Enter an item to pack for your trip: ")
-    list_of_items.append(item)
-print("You have packed the following items for your trip:")
-for item in list_of_items: 
-    print(f"- {item}")
-""""""""""""""""""
-
-"file.close()"""""""""
